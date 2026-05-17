@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- character encoding -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- browser tab title -->
+    <title>Singapore Noodle HQ</title>
+
+    <!--Adobe font for nav and headings -->
+    <link rel="stylesheet" href="https://use.typekit.net/knz0rxy.css">
+    <!-- global css -->
+    <link rel="stylesheet" href="css/global.css">
+    <!-- home specific styling -->
+    <link rel="stylesheet" href="css/home.css">
+    <!-- google font for message under logo -->
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./images/favicon.png?v=22">
+
+    <!-- Apple devices -->
+    <link rel="apple-touch-icon" href="./images/favicon.png?v=22">
+
+    <!-- preload background to avoing glitches -->
+    <link rel="preload" as="image" href="images/noodle_background.webp">
+    <link rel="preload" as="image" href="images/noodle_background_mobile.webp">
+
+</head>
+
+<body class="home-page has-spot">
+
+    <!-- HOTSPOT -->
+    <!-- invisible area that activates animation and links to Swinburne -->
+    <a href="https://www.swinburne.edu.au" target="_blank" rel="noopener noreferrer" class="spot">
+    </a>
+
+    <!-- HEADER -->
+    <header class="site-header">
+
+        <!--Logo section with hover message -->
+        <div class="logo-wrap">
+
+            <!-- Logo -->
+            <img src="images/noodle_logo.png" class="logo" alt="Singapore Noodle HQ logo">
+            <!-- message under logo on hover -->
+            <div class="hover-msg">Welcome to Singapore Noodle HQ</div>
+        </div>
+
+        <!-- navigation links -->
+        <input type="checkbox" id="menu-toggle">
+
+        <label for="menu-toggle" class="hamburger">
+        ☰
+        </label>
+
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="Restaurants.html">Where to Go</a>
+            <a href="Recipe.html">Recipe</a>
+            <a href="Contact.html">Contact</a>
+        </nav>
+
+    </header>
+
+    <!-- background image layers -->
+    <div class="image-wrapper">
+        <!-- main background image -->
+        <img src="images/noodle_background.webp" class="bg-image" alt="Singapore noodles background">
+        <!-- red background image on hover -->
+        <img src="images/noodle_background_red.webp" class="bg-hover" alt="Red highlighted noodles background">
+        <!-- swin drawn logo image -->
+        <img src="images/swin.webp" class="swin-overlay" alt="Swinburne logo marker">
+        <!-- Visit swin link image -->
+        <img src="images/swinburne_link_background.webp" class="swin-link" alt="swinburne link to website image">
+        <!-- mobile background image -->
+        <img src="images/noodle_background_mobile.webp" class="bg-mobile" alt="background for mobile screens">
+    </div>
+
+</body>
+</html>

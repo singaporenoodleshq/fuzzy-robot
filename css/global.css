@@ -1,0 +1,439 @@
+/* resets page, removes default browser spacing */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+/* adds scroll if overflows*/
+html {
+    overflow-y: scroll;
+}
+
+/* text styling */
+h1, h2 {
+    font-family: "roc-grotesk", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    margin: 0;
+}
+
+h1 {
+    font-size: clamp(24px, 3vw, 42px);
+}
+
+h2{
+    color: red;
+    font-size: clamp(18px, 2.5vw, 24px);
+}
+
+p {
+    font-family: 'Special Elite', Courier, monospace;
+    font-size: clamp(10px, 1.5vw, 14px);
+    font-weight: 800;
+}
+
+/*
+header and nav layout
+creates horizontal layout using flexbox
+*/
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 10px 40px;
+    width: 100%;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+}
+
+/* nav menu styling */
+.nav {
+    font-family: "roc-grotesk", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    margin-top: 25px;
+    margin-left: auto;
+    display: flex;
+    gap: 28px;
+    font-size: clamp(12px, 2vw, 35px);
+}
+
+/* nav menu links */
+.nav a {
+    color: black;
+    text-decoration: none;
+
+    display: inline-block;
+
+    transition:
+        transform 0.3s ease,
+        color 0.3s ease;
+
+/* Improves font rendering during hover effects.
+Helps prevent visual glitches and colour artefacts
+on animated Adobe fonts. */
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+/* nav hover effect */
+.nav a:hover {
+    color: red;
+    transform: scale(1.05);
+
+    text-shadow:
+        1px 1px 2px rgba(0,0,0,0.3);
+}
+
+/* nav styling on small screens */
+#menu-toggle {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+}
+
+/* Logo - controls logo positioning and hover message */
+.logo-wrap {
+    position: relative;
+    display: inline-block;
+}
+
+/* main logo style */
+.logo {
+    width: clamp(240px, 30vw, 400px);
+    height: auto;
+    animation: none;
+    display: block;
+    transition: 0.2s;
+}
+
+.logo-link {
+    display: inline-block;
+    cursor: pointer;
+    line-height: 0;
+}
+
+/* switches logo image to red on hover */
+.logo:hover {
+    content: url("../images/noodle_logo_red.png");
+}
+
+/* Logo hidden hover message under logo */
+.hover-msg {
+    position: absolute;
+    top: 90%;
+    left: clamp(10px, 0.5vw, 25px);
+
+    font-family: 'Special Elite', Courier, monospace;
+    font-size: clamp(14px, 2vw, 16px);
+    color: red;
+    background-color: #F7F7ED;
+
+    opacity: 0;
+    transform: translateY(10px);
+    transition: 0.2s;
+
+    pointer-events: none;
+    white-space: nowrap;
+    width: max-content;
+}
+
+/* message displayed when logo hovered */
+.logo-wrap:hover .hover-msg {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Move logo hover message up slightly on non-home pages */
+body:not(.home-page) .hover-msg {
+    top: 85%;
+}
+
+/*
+Background images
+full screen layered images
+*/
+.image-wrapper {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+
+.image-wrapper {
+    opacity: 0;
+    animation: showBackground 0.2s ease forwards;
+    animation-delay: 0.2s;
+}
+
+.bg-image,
+.bg-hover,
+.swin-overlay,
+.swin-link,
+.bg-mobile {
+    position: absolute;
+    inset: 0;
+
+    width: 100vw;
+    height: 100vh;
+    aspect-ratio: 16 / 9;
+
+    object-fit: cover;
+    object-position: center top;
+
+    display: block;
+}
+
+.swin-link {
+    z-index: 4;
+}
+
+.swin-overlay {
+    z-index: 3;
+}
+
+.bg-hover {
+    z-index: 2;
+}
+
+.bg-image {
+    z-index: 1;
+}
+
+.swin-link {
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.spot:hover ~ .image-wrapper .swin-link {
+    opacity: 1;
+}
+
+/* shaking animation to SWIN image */
+.swin-overlay {
+    animation: jiggleCycle 5s infinite;
+}
+
+/* stops shaking animation on SWIN when hovered */
+.spot:hover ~ .image-wrapper .swin-overlay {
+    animation: none;
+    transform: none;
+}
+
+/* Hotspot
+Invisible clickable area
+*/
+.spot {
+
+    position: absolute;
+    top: 26.5%;
+    left: 11.7%;
+    width: 10%;
+    height: 30%;
+    z-index: 9999;
+    cursor: pointer;
+}
+
+/* Hotspot effects
+Keeps content layers above background images */
+
+/* Wiggles logo when hotspot is hovered */
+.spot:hover ~ .site-header .logo {
+    animation: floatLogo 2.5s ease-in-out infinite;
+}
+
+/* Displays logo message when hotspot is hovered */
+.spot:hover ~ .site-header .hover-msg {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* White rectangles */
+.container,
+.recipe-container,
+.restaurant-box {
+    position: relative;
+    z-index: 10;
+
+    width: 70%;
+    margin: 18% 0 40px 25%;
+    padding: 20px;
+    box-sizing: border-box;
+
+    background: white;
+    border-radius: 10px;
+}
+
+/* attempt to stop img movement on loading in chrome */
+img {
+    display: block;
+}
+/* attempt to stop img movement on loading in chrome */
+.bg-mobile {
+    display: none;
+}
+
+
+/* Animations in CSS */
+
+@keyframes jiggleCycle {
+    0%   { transform: rotate(0deg); }
+    3%   { transform: rotate(0.5deg); }
+    6%   { transform: rotate(-0.5deg); }
+    9%   { transform: rotate(0.5deg); }
+    12%  { transform: rotate(0deg); }
+    100% { transform: rotate(0deg); }
+}
+
+@keyframes floatLogo {
+    0%   { transform: rotate(0deg) translateY(0px); }
+    25%  { transform: rotate(0.3deg) translateY(-3px); }
+    50%  { transform: rotate(0deg) translateY(-4px); }
+    75%  { transform: rotate(-0.3deg) translateY(-3px); }
+    100% { transform: rotate(0deg) translateY(0px); }
+}
+
+@keyframes showBackground {
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Screen size responsive layouts */
+
+/* Tablet layout */
+@media screen and (max-width: 900px) {
+
+    .nav {
+        flex-wrap: wrap;
+        width: 220px;
+        justify-content: flex-end;
+        gap: 10px 20px;
+    }
+
+    body:not(.home-page) .swin-overlay {
+        animation: none;
+        transform: none;
+    }
+
+    body:not(.home-page) .spot,
+    body:not(.home-page) .hover-text {
+        display: none;
+    }
+
+}
+
+/* Mobile layout */
+@media screen and (max-width: 700px) {
+
+    /* Changes formatting of white rectangle on mobile screens */
+    .site-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        padding: 10px 20px;
+
+        position: relative;
+        z-index: 9999;
+    }
+
+    .logo {
+        width: 80vw;
+        max-width: 420px;
+    }
+
+    .hover-msg {
+    font-size: clamp(18px, 1vw, 20px);
+    }
+
+    /* Changes formatting of nav on mobile screens */
+    .hamburger {
+        display: block;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        color: red;
+        font-size: 32px;
+        cursor: pointer;
+        z-index: 9999;
+    }
+    
+
+    .nav {
+        display: none;
+        flex-direction: column;
+
+        position: absolute;
+        top: 85px;
+        right: 30px;
+
+        align-items: flex-end;
+        gap: 8px;
+
+        z-index: 9998;
+    }
+
+    #menu-toggle:checked ~ .nav {
+        display: flex;
+    }
+
+    .nav a {
+        color: #F7F7ED;
+        background-color: rgba(46, 44, 44, 0.9);
+        padding: 4px 10px;
+        border-radius: 3px;
+        font-weight: 400;
+        text-align: center;
+    }
+
+    .hamburger:hover {
+        transform: scale(1.1);
+    }
+
+    .image-wrapper {
+        position: fixed;
+        inset: 0;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        z-index: 0;
+    }
+
+    .bg-image {
+        display: none;
+    }
+
+    .bg-mobile {
+        display: block;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .container,
+    .recipe-container,
+    .restaurant-box {
+        width: 88% !important;
+        max-width: 900px;
+        margin: 50px auto 40px auto !important;
+        padding: 20px;
+        box-sizing: border-box;
+}
+}

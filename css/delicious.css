@@ -1,0 +1,39 @@
+/* Delicious noodle PAGE ONLY: button */
+
+body {
+    margin: 0;
+    position: relative;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.back-btn {
+    position: fixed;
+    top: 45px;
+    right: 20px;
+
+    display: inline-block;
+    padding: 10px 18px;
+
+    background-color: red;
+    color: #F7F7ED;
+
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+
+    border-radius: 6px;
+
+    transition: 0.3s ease;
+
+    z-index: 1000;
+}
+
+.back-btn:hover {
+    background-color: #2e2c2c;
+    transform: scale(1.03);
+}

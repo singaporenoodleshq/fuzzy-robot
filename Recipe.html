@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- character encoding -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- browser tab title -->
+    <title>Recipes</title>
+
+    <!--Adobe font for nav and headings -->
+    <link rel="stylesheet" href="https://use.typekit.net/knz0rxy.css">
+    <!-- global css -->
+    <link rel="stylesheet" href="css/global.css">
+    <!-- recipe specific styling -->
+    <link rel="stylesheet" href="css/recipe.css">
+    <!-- google font for message under logo -->
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./images/favicon.png?v=22">
+
+    <!-- Apple devices -->
+    <link rel="apple-touch-icon" href="./images/favicon.png?v=22">
+
+    <!-- preload background to avoid glitches -->
+    <link rel="preload" as="image" href="images/noodle_background_alt.webp">
+    <link rel="preload" as="image" href="images/noodle_background_mobile.webp">
+
+</head>
+
+<body class="has-spot">
+
+        <!-- HOTSPOT -->
+        <a href="https://www.swinburne.edu.au" target="_blank" rel="noopener noreferrer" class="spot"></a>
+
+        <!-- background image layers -->
+        <div class="image-wrapper">
+            <img src="images/noodle_background_alt.webp" class="bg-image" alt="Background">
+            <img src="images/swin.webp" class="swin-overlay" alt="swinburne handwritten logo">
+            <img src="images/swinburne_link_background.webp" class="swin-link" alt="swinburne link to website image">
+            <img src="images/noodle_background_mobile.webp" class="bg-mobile" alt="background for mobile screens">
+        </div>
+
+        <!-- HEADER -->
+        <header class="site-header">
+
+            <!--Logo section with hover message -->
+            <div class="logo-wrap">
+                <a href="index.html" class="logo-link">
+                    <img src="images/noodle_logo.png"
+                        class="logo"
+                        alt="Singapore Noodle HQ logo">
+                </a>
+                <!-- message under logo on hover -->
+                <div class="hover-msg">Shaking noodles as they cook is essential.</div>
+            </div>
+
+            <!-- navigation links -->
+            <input type="checkbox" id="menu-toggle">
+
+            <label for="menu-toggle" class="hamburger">
+            ☰
+            </label>
+
+            <nav class="nav">
+                <a href="index.html">Home</a>
+                <a href="Restaurants.html">Where to Go</a>
+                <a href="Recipe.html">Recipe</a>
+                <a href="Contact.html">Contact</a>
+            </nav>
+        </header>
+
+        <!--  
+        RECIPE PAGE
+        Displays ingredients, cooking method and
+        interactive shopping list-->
+        <main class="recipe-container">
+
+            <!-- heading -->
+            <h1>Recipe</h1>
+
+            <!-- serving calculation -->
+            <div class="serves-section">
+                <p class="serves-title">
+                    <strong>Serves:</strong> <span id="serveCount">2</span>
+                </p>
+
+                <div class="serve-buttons">
+                    <button onclick="updateServes(2)">2 Serves</button>
+                    <button onclick="updateServes(4)">4 Serves</button>
+                    <button onclick="updateServes(6)">6 Serves</button>
+                </div>
+            </div>
+
+            <!-- sets 2 column grid -->
+            <div class="recipe-grid">
+
+                    <div class="ingredients">
+                        <h2>Ingredients</h2>
+
+                        <label class="typewriter-text">
+                            <input type="checkbox" class="ing">
+                            <span><span class="qty" data-base="2">2</span> tbsp Soy sauce</span>
+                        </label>
+
+                        <label class="typewriter-text">
+                            <input type="checkbox" class="ing">
+                            <span><span class="qty" data-base="1">1</span> tbsp Curry powder</span>
+                        </label>
+
+                        <label class="typewriter-text">
+                            <input type="checkbox" class="ing">
+                            <span><span class="qty" data-base="200">200</span>g Rice noodles</span>
+                        </label>
+
+                        <label class="typewriter-text">
+                            <input type="checkbox" class="ing">
+                            <span><span class="qty" data-base="2">2</span> Eggs</span>
+                        </label>
+
+                        <label class="typewriter-text">
+                            <input type="checkbox" class="ing">
+                            <span><span class="qty" data-base="6">6</span> Prawns</span>
+                        </label>
+
+                        <h2>Shopping List</h2>
+                        <ul id="shoppingList"></ul>
+
+                        <button type="button" class="modern-btn" onclick="shareList()">
+                            Send Shopping List
+                        </button>
+                    </div>
+
+                <div class="method">
+                    <h2>Method</h2>
+
+                    <ol>
+                        <li>Soak rice noodles in warm water until soft.</li>
+                        <li>Heat oil in a wok and cook prawns until pink.</li>
+                        <li>Add garlic, onion, and curry powder.</li>
+                        <li>Stir in noodles, soy sauce, and vegetables.</li>
+                        <li>Toss everything together and serve hot.</li>
+                    </ol>
+
+                    <img src="images/ingredients.png" class="imgcentre" alt="Singapore noodles">
+                </div>
+
+            </div>
+
+        </main>
+
+    <script src="js/recipe.js"></script>
+
+</body>
+</html>

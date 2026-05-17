@@ -1,0 +1,222 @@
+/*test formatting */
+h2 {padding-top: 10px;
+    margin-bottom: 0;
+}
+/* Recipe layout 
+creates two columns for ingredient and method*/
+.recipe-grid {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+/* Left column */
+.ingredients {
+    flex: 0 0 220px;
+}
+
+/* Right column */
+.method {
+    flex: 1;
+}
+
+/* Text styling and spacing*/
+
+.recipe-container h1,
+.recipe-container h2 {
+    font-family: "roc-grotesk", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+.recipe-container h2 {
+    margin-top: 20px;
+    margin-bottom: 12px;
+    line-height: 1.1;
+}
+
+.recipe-container h1 {
+    margin-top: 10px;
+    line-height: 1.0;
+    margin-bottom: 0px;
+
+}
+
+/* Aligns Ingredients and Method sections */
+.ingredients h2,
+.method h2 {
+    height: 25px;
+}
+
+/* Body text inside recipe container */
+.recipe-container p,
+.recipe-container li,
+.recipe-container label {
+    font-family: "Courier New", Courier, monospace;
+    font-size: clamp(10px, 2vw, 14px);
+}
+
+/* Ingredient checkbox labels */
+.ingredients label {
+    display: block;
+    margin-bottom: 3px;
+}
+
+/* Method ordered list */
+.method ol {
+    padding-left: 18px;
+}
+
+/* Space between method steps */
+.method li {
+    margin-bottom: 3px;
+}
+
+/* Recipe image formatting*/
+.imgcentre {
+    max-width: 250px;
+    width: 100%;
+    display: block;
+    margin: 20px auto 0;
+    /* Rounded image corners */
+    border-radius: 5px;
+}
+
+/* Button styling */
+.modern-btn {
+    background: black;
+    color: #F7F7ED;
+    border: none;
+    padding: 6px 12px;
+    font-family: "Courier New", Courier, monospace;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+/* Button styling on hover*/
+.modern-btn:hover {
+    background: #F7F7ED;
+    color: black;
+
+}
+
+/* Shopping list style*/
+#shoppingList {
+    font-family: "Courier New", Courier, monospace;
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+
+
+/* Crosses out checked ingredients */
+.ingredients label.checked span {
+    text-decoration: line-through;
+}
+
+/* Keeps logo hover message on one line */
+.hover-msg {
+    white-space: nowrap;
+}
+
+/* Serves section */
+.serves-section {
+    margin-bottom: 5px;
+}
+
+/* Serves heading */
+.serves-title {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+/* Button row */
+.serve-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* Buttons */
+.recipe-container .serve-buttons button {
+    background: black;
+    color: #F7F7ED;
+    border: none;
+    padding: 3px 6px;
+    font-family: "Courier New", Courier, monospace;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.recipe-container .serve-buttons button:hover {
+    background: #F7F7ED;
+    color: black;
+}
+
+/* Custom checkbox */
+.ing {
+    appearance: none;
+    -webkit-appearance: none;
+
+    width: clamp(12px, 2vw, 14px);
+    height: clamp(12px, 2vw, 14px);
+
+    border: 2px solid black;
+    border-radius: 3px;
+
+    background: #F7F7ED;
+
+    cursor: pointer;
+
+    margin-right: 10px;
+
+    position: relative;
+    top: 5px;
+}
+
+/* Checked state */
+.ing:checked {
+    background: black;
+}
+
+/* Tick */
+.ing:checked::after {
+    content: "✓";
+
+    color: #F7F7ED;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    position: absolute;
+    top: -2px;
+    left: 0px;
+}
+
+/* Mobile layout */
+@media screen and (max-width: 700px) {
+
+    /* Displays in one column */
+    .recipe-grid {
+        display: block;
+    }
+
+    .ingredients,
+    .shopping-list,
+    .method {
+        width: 100%;
+    }
+
+    /* Hides image on mobile screens */
+    .recipe-image,
+    .imgcentre {
+        display: none;
+    }
+
+    /* Adjusts font size on mobile screens */
+    .recipe-container p,
+    .recipe-container li,
+    .recipe-container label {
+        font-size: clamp(14px, 2vw, 18px);
+    }
+
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- character encoding -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- browser tab title -->
+    <title>Contact</title>
+
+    <!--Adobe font for nav and headings -->
+    <link rel="stylesheet" href="https://use.typekit.net/knz0rxy.css">
+    <!-- global css -->
+    <link rel="stylesheet" href="css/global.css">
+    <!-- home specific styling -->
+    <link rel="stylesheet" href="css/contact.css">
+    <!-- google font for message under logo -->
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./images/favicon.png?v=22">
+
+    <!-- Apple devices -->
+    <link rel="apple-touch-icon" href="./images/favicon.png?v=22">
+
+    <!-- preload background to avoid glitches -->
+    <img src="images/noodle_background_alt.webp" class="bg-image" alt="Background" width="1920" height="1080">
+    <img src="images/noodle_background_mobile.webp" class="bg-mobile" alt="background for mobile screens" width="900" height="1600">
+ 
+</head>
+
+<body class="has-spot">
+
+    <!-- HOTSPOT -->
+    <a href="https://www.swinburne.edu.au" target="_blank" rel="noopener noreferrer" class="spot"></a>
+
+    <!-- background image layers -->
+    <div class="image-wrapper">
+        <img src="images/noodle_background_alt.webp" class="bg-image" alt="Background">
+        <img src="images/swin.webp" class="swin-overlay" alt="swinburne handwritten logo">
+        <img src="images/swinburne_link_background.webp" class="swin-link" alt="swinburne link to website image">
+        <img src="images/noodle_background_mobile.webp" class="bg-mobile" alt="background for mobile screens">
+    </div>
+
+    <!-- HEADER -->
+    <header class="site-header">
+
+        <!-- logo section with hover message -->
+        <div class="logo-wrap">
+            <a href="index.html" class="logo-link">
+                <img src="images/noodle_logo.png"
+                    class="logo"
+                    alt="Singapore Noodle HQ logo">
+            </a>
+            <!-- message under logo on hover -->
+            <div class="hover-msg">We are only a click away...</div>
+        </div>
+
+        <!-- navigation links -->
+        <input type="checkbox" id="menu-toggle">
+
+        <label for="menu-toggle" class="hamburger">
+        ☰
+        </label>
+
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="Restaurants.html">Where to Go</a>
+            <a href="Recipe.html">Recipe</a>
+            <a href="Contact.html">Contact</a>
+        </nav>
+        
+    </header>
+
+        <!-- contents of white conatiner -->
+        <main class="container">
+
+            <!-- Splits page into image and form sections -->
+            <div class="layout-split">
+
+                <!-- Contact page image -->
+                <div class="contact-image">
+                    <img src="images/noodle_bowl.jpg" alt="Noodles">
+                </div>
+
+                <!-- Contact form section -->
+                <div class="contact-form-wrapper">
+
+                    <!-- Contact form heading -->
+                    <h1>Contact Us</h1>
+
+                    <!-- Contact form -->
+                    <form class="contact-form">
+
+                        <!-- Name input field -->
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+
+                        <!-- Email input field -->
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <!-- Message text area -->
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+
+                        <!-- Form submit button -->
+                        <button type="submit" class="form-btn">Send Message</button>
+
+                        <!-- Hidden thank you message displayed after form submission -->
+                        <p id="thankyou">We may or may not get back to you.</p>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+            
+        </main>
+
+    <script src="js/contact.js"></script>
+
+</body>
+
+</html>

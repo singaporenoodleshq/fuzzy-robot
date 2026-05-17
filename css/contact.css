@@ -1,0 +1,142 @@
+/* Layout - create two columns */
+.layout-split {
+    display: flex;
+
+    /* Space between image and form */
+    gap: 30px;
+
+    /* Aligns items to top */
+    align-items: flex-start;
+}
+
+/* Left image column */
+.contact-image {
+    flex: 0 0 250px;
+}
+
+/* Image styling */
+.contact-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+
+    /* Rounded image corners */
+    border-radius: 5px;
+}
+
+/* Right form column */
+.contact-form-wrapper {
+    flex: 1;
+}
+
+/* Contact form, stacks form items vertically */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Form labels */
+.contact-form label {
+    margin: 8px 0 2px 0;
+    line-height: 1;
+    font-size: clamp(12px, 1.5vw, 16px);
+}
+
+/* Input fields and message box */
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 6px;
+    margin-bottom: 6px;
+}
+
+/*  Font styling consistent across all form elements */
+.contact-form input,
+.contact-form textarea,
+.contact-form label,
+.contact-form button {
+    font-family: 'Special Elite', Courier, monospace;
+    font-size: clamp(8px, 1.5vw, 18px);
+}
+
+/* Button styling */
+.form-btn {
+    margin-top: 20px;
+    padding: 10px 18px;
+
+    background: black;
+    color: #F7F7ED;
+
+    border: none;
+    border-radius: 8px;
+
+    cursor: pointer;
+}
+
+/* Button hover effect */
+.form-btn:hover {
+    background: #F7F7ED;
+    color: black;
+}
+
+/* Thank you message
+*/
+#thankyou {
+
+    /* Hidden until triggered by JavaScript */
+    display: none;
+
+    color: red;
+    margin-top: 15px;
+    font-size: clamp(12px, 1.5vw, 14px);
+}
+
+/* styling form for mobile screen */
+@media screen and (max-width: 700px) {
+
+    /* Displays in one column */
+    .layout-split {
+        display: block;
+    }
+
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form select {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .contact-form-wrapper {
+        width: 100%;
+        flex: none;
+    }
+
+    .contact-image img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        display: block;
+    }
+
+    /*  Font styling consistent across all form elements */
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form label,
+    .contact-form button {
+        font-size: clamp(14px, 1.5vw, 16px);
+    }
+
+    #thankyou {
+
+    /* Hidden until triggered by JavaScript */
+        display: none;
+
+        color: red;
+        margin-top: 15px;
+        font-size: clamp(14px, 1.5vw, 16px);
+    }
+
+}
+
+

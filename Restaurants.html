@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- character encoding -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- browser tab title -->
+    <title>Restaurants</title>
+
+    <!--Adobe font for nav and headings -->
+    <link rel="stylesheet" href="https://use.typekit.net/knz0rxy.css">
+    <!-- global css -->
+    <link rel="stylesheet" href="css/global.css">
+    <!-- restaurant specific styling -->
+    <link rel="stylesheet" href="css/restaurant.css">
+    <!-- google font for message under logo -->
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./images/favicon.png?v=22">
+
+    <!-- Apple devices -->
+    <link rel="apple-touch-icon" href="./images/favicon.png?v=22">
+
+    <!-- preload background to avoid glitches -->
+    <link rel="preload" as="image" href="images/noodle_background_alt.webp">
+    <link rel="preload" as="image" href="images/noodle_background_mobile.webp">
+
+</head>
+
+<body class="has-spot">
+
+    <!-- HOTSPOT -->
+    <a href="https://www.swinburne.edu.au" target="_blank" rel="noopener noreferrer" class="spot"></a>
+
+    <!-- background image layers -->
+    <div class="image-wrapper">
+        <img src="images/noodle_background_alt.webp" class="bg-image" alt="Background">
+        <img src="images/swin.webp" class="swin-overlay" alt="swinburne handwritten logo">
+        <img src="images/swinburne_link_background.webp" class="swin-link" alt="swinburne link to website image">
+        <img src="images/noodle_background_mobile.webp" class="bg-mobile" alt="background for mobile screens">
+    </div>
+
+    <!-- HEADER -->
+    <header class="site-header">
+
+        <!-- logo section with hover message -->
+        <div class="logo-wrap">
+            <a href="index.html" class="logo-link">
+                <img src="images/noodle_logo.png"
+                    class="logo"
+                    alt="Singapore Noodle HQ logo">
+            </a>
+            <!-- message under logo on hover -->
+            <div class="hover-msg">Best Singapore noodles in Melbourne!</div>
+        </div>
+
+        <!-- navigation links -->
+        <input type="checkbox" id="menu-toggle">
+
+        <label for="menu-toggle" class="hamburger">
+        ☰
+        </label>
+
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="Restaurants.html">Where to Go</a>
+            <a href="Recipe.html">Recipe</a>
+            <a href="Contact.html">Contact</a>
+        </nav>
+
+    </header>
+
+    <!-- contents of white conatiner -->
+    <main class="restaurant-box">
+
+        <!-- heading -->
+        <h1>Where to get'em</h1>
+
+        <!-- table with restaurant details -->
+        <table class="places-table">
+
+            <!-- column headings -->
+             <thead>
+                <tr>
+                    <th>Restaurant</th>
+                    <th>Location</th>
+                    <th>Rating</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <!-- restaurant 1 -->
+                <tr onclick="window.open('https://jalanalorcbd.yumbojumbo.com.au', '_blank', 'noopener,noreferrer')">
+                    <td>Jalan Alor</td>
+                    <td>CBD</td>
+                    <td>⭐ 4.7</td>
+                    <td>Great flavour and generous portions</td>
+                </tr>
+
+                <!-- restaurant 2 -->
+                <tr onclick="window.open('https://www.chinabar.com.au', '_blank', 'noopener,noreferrer')">
+                    <td>China Bar</td>
+                    <td>Hawthorn</td>
+                    <td>⭐ 4.2</td>
+                    <td>Authentic taste with a spicy kick</td>
+                </tr>
+
+                <!-- restaurant 3 -->
+                <tr onclick="window.open('https://nanyangexpress-chinatown.tuckerfox.com.au/', '_blank', 'noopener,noreferrer')">
+                    <td>Nan Yang Express</td>
+                    <td>Hawthorn</td>
+                    <td>⭐ 4.0</td>
+                    <td>Quick service, great for lunch</td>
+                </tr>
+
+                <!-- restaurant 4 -->
+                <tr onclick="window.open('https://www.oldrafflesplace.com', '_blank', 'noopener,noreferrer')">
+                    <td>Old Raffles Place</td>
+                    <td>Collingwood</td>
+                    <td>⭐ 3.9</td>
+                    <td>Nice decor, cheerful service</td>
+                </tr>
+
+                <!-- restaurant 5 -->
+                <tr onclick="window.open('http://rotiroad.com.au/', '_blank', 'noopener,noreferrer')">
+                    <td>Roti Road</td>
+                    <td>CBD</td>
+                    <td>⭐ 3.2</td>
+                    <td>I think the Roti is better than the noodles.</td>
+                </tr>
+
+                <!-- restaurant 6 -->
+                <tr onclick="window.open('Delicious_Noodles.html', '_blank', 'noopener,noreferrer')">
+                    <td>Ordinary Noodles</td>
+                    <td>Dunkeld</td>
+                    <td>⭐ 1.2</td>
+                    <td>Worse than any noodle you have tried 🪳🤮⛔️</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </main>
+
+</body>
+</html>
