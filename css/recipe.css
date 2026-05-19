@@ -216,7 +216,7 @@ creates two columns for ingredient and method*/
     .recipe-container p,
     .recipe-container li,
     .recipe-container label {
-        font-size: clamp(14px, 2vw, 18px);
+        font-size: clamp(16px, 2vw, 18px);
     }
 
 }
