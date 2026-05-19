@@ -230,9 +230,9 @@ Invisible clickable area
 .spot {
 
     position: absolute;
-    top: 26.5%;
-    left: 11.7%;
-    width: 10%;
+    top: 30.5%;
+    left: 1.7%;
+    width: 20%;
     height: 30%;
     z-index: 9999;
     cursor: pointer;
@@ -252,7 +252,7 @@ Keeps content layers above background images */
     transform: translateY(0);
 }
 
-/* White rectangles */
+/* White rectangle container format */
 .container,
 .recipe-container,
 .restaurant-box {
@@ -297,41 +297,23 @@ img {
     100% { transform: rotate(0deg) translateY(0px); }
 }
 
-@keyframes showBackground {
-    to {
-        opacity: 1;
-    }
-}
-
 
 /* Screen size responsive layouts */
-
-/* Tablet layout */
-@media screen and (max-width: 900px) {
-
-    .nav {
-        flex-wrap: wrap;
-        width: 220px;
-        justify-content: flex-end;
-        gap: 10px 20px;
-    }
-
-    body:not(.home-page) .swin-overlay {
-        animation: none;
-        transform: none;
-    }
-
-    body:not(.home-page) .spot,
-    body:not(.home-page) .hover-text {
-        display: none;
-    }
-
-}
 
 /* Mobile layout */
 @media screen and (max-width: 700px) {
 
-    /* Changes formatting of white rectangle on mobile screens */
+    /* Disable hotspot + animations */
+    .spot {
+        display: none;
+    }
+
+    .swin-overlay {
+        animation: none;
+        transform: none;
+    }
+
+    /* Header */
     .site-header {
         display: flex;
         justify-content: space-between;
@@ -349,10 +331,10 @@ img {
     }
 
     .hover-msg {
-    font-size: clamp(18px, 1vw, 20px);
+        font-size: clamp(18px, 1vw, 20px);
     }
 
-    /* Changes formatting of nav on mobile screens */
+    /* Mobile nav */
     .hamburger {
         display: block;
         position: fixed;
@@ -363,7 +345,6 @@ img {
         cursor: pointer;
         z-index: 9999;
     }
-    
 
     .nav {
         display: none;
@@ -392,19 +373,7 @@ img {
         text-align: center;
     }
 
-    .hamburger:hover {
-        transform: scale(1.1);
-    }
-
-    .image-wrapper {
-        position: fixed;
-        inset: 0;
-        width: 100vw;
-        height: 100vh;
-        overflow: hidden;
-        z-index: 0;
-    }
-
+    /* Background swap */
     .bg-image {
         display: none;
     }
@@ -415,11 +384,14 @@ img {
         position: absolute;
         top: 0;
         left: 0;
+
         width: 100%;
         height: 100%;
+
         object-fit: cover;
     }
 
+    /* White containers */
     .container,
     .recipe-container,
     .restaurant-box {
@@ -428,5 +400,5 @@ img {
         margin: 50px auto 40px auto !important;
         padding: 20px;
         box-sizing: border-box;
-}
+    }
 }
