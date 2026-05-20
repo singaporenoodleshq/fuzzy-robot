@@ -88,6 +88,7 @@ creates two columns for ingredient and method*/
     border: none;
     padding: 6px 12px;
     font-family: "Courier New", Courier, monospace;
+    font-weight: 700;
     cursor: pointer;
     border-radius: 3px;
 }
@@ -143,6 +144,7 @@ creates two columns for ingredient and method*/
     border: none;
     padding: 3px 6px;
     font-family: "Courier New", Courier, monospace;
+    font-weight: 700;
     cursor: pointer;
     border-radius: 3px;
 }
@@ -216,7 +218,7 @@ creates two columns for ingredient and method*/
     .recipe-container p,
     .recipe-container li,
     .recipe-container label {
-        font-size: clamp(18px, 2vw, 20px);
+        font-size: clamp(16px, 2vw, 18px);
     }
 
 }
