@@ -40,6 +40,8 @@
     margin: 8px 0 2px 0;
     line-height: 1;
     font-size: clamp(12px, 1.5vw, 16px);
+    font-family: "roc-grotesk", sans-serif;
+    color: red;
 }
 
 /* Input fields and message box */
@@ -53,11 +55,15 @@
 /*  Font styling consistent across all form elements */
 .contact-form input,
 .contact-form textarea,
-.contact-form label,
 .contact-form button {
-    font-family: 'Special Elite', Courier, monospace;
+    font-family: "Courier New", Courier, monospace;
     font-size: clamp(8px, 1.5vw, 18px);
 }
+
+.contact-form button {
+    font-weight: 700;
+}
+
 
 /* Button styling */
 .form-btn {
