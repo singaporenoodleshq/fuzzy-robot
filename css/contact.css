@@ -52,7 +52,7 @@
     margin-bottom: 6px;
 }
 
-/*  Font styling consistent across all form elements */
+/* Font styling consistent across all form elements */
 .contact-form input,
 .contact-form textarea,
 .contact-form button {
@@ -85,8 +85,7 @@
     color: black;
 }
 
-/* Thank you message
-*/
+/* Thank you message */
 #thankyou {
 
     /* Hidden until triggered by JavaScript */
@@ -134,8 +133,7 @@
     }
 
     #thankyou {
-
-    /* Hidden until triggered by JavaScript */
+/* Hidden until triggered by JavaScript */
         display: none;
 
         color: red;
