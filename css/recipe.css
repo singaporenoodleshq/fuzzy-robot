@@ -20,7 +20,7 @@ creates two columns for ingredient and method*/
     flex: 1;
 }
 
-/* Text styling and spacing*/
+/* Text styling and spacing */
 
 .recipe-container h1,
 .recipe-container h2 {
@@ -71,7 +71,7 @@ creates two columns for ingredient and method*/
     margin-bottom: 3px;
 }
 
-/* Recipe image formatting*/
+/* Recipe image formatting */
 .imgcentre {
     max-width: 250px;
     width: 100%;
@@ -93,14 +93,14 @@ creates two columns for ingredient and method*/
     border-radius: 3px;
 }
 
-/* Button styling on hover*/
+/* Button styling on hover */
 .modern-btn:hover {
     background: #F7F7ED;
     color: black;
 
 }
 
-/* Shopping list style*/
+/* Shopping list style */
 #shoppingList {
     font-family: "Courier New", Courier, monospace;
     margin-top: 10px;
