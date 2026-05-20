@@ -12,7 +12,7 @@ creates two columns for ingredient and method*/
 
 /* Left column */
 .ingredients {
-    flex: 0 0 220px;
+    flex: 0 0 240px;
 }
 
 /* Right column */
