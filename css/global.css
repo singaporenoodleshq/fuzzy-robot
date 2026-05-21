@@ -6,7 +6,7 @@ html, body {
     overflow-x: hidden;
 }
 
-/* adds scroll if overflows */
+/* adds scroll if overflows*/
 html {
     overflow-y: scroll;
 }
@@ -222,6 +222,7 @@ full screen layered images
 .spot:hover ~ .image-wrapper .swin-overlay {
     animation: none;
     transform: none;
+    
 }
 
 /* Hotspot
@@ -241,9 +242,10 @@ Invisible clickable area
 /* Hotspot effects
 Keeps content layers above background images */
 
-/* Wiggles logo when hotspot is hovered */
+/* Wiggles logo + changes to red when hotspot is hovered */
 .spot:hover ~ .site-header .logo {
     animation: floatLogo 2.5s ease-in-out infinite;
+    content: url("../images/noodle_logo_red.png");
 }
 
 /* Displays logo message when hotspot is hovered */
