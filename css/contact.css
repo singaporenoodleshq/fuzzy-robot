@@ -52,12 +52,30 @@
     margin-bottom: 6px;
 }
 
-/* Font styling consistent across all form elements */
+/*  Font styling consistent across all form elements */
 .contact-form input,
 .contact-form textarea,
 .contact-form button {
     font-family: "Courier New", Courier, monospace;
     font-size: clamp(8px, 1.5vw, 18px);
+}
+
+/* Input fields and message box */
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 6px;
+    margin-bottom: 6px;
+
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+
+/* Changes border when field is clicked */
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border: 1px solid black;
 }
 
 .contact-form button {
@@ -85,7 +103,8 @@
     color: black;
 }
 
-/* Thank you message */
+/* Thank you message
+*/
 #thankyou {
 
     /* Hidden until triggered by JavaScript */
@@ -133,7 +152,8 @@
     }
 
     #thankyou {
-/* Hidden until triggered by JavaScript */
+
+    /* Hidden until triggered by JavaScript */
         display: none;
 
         color: red;
