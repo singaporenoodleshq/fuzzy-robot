@@ -1,4 +1,4 @@
-/* test formatting */
+/*test formatting */
 h2 {padding-top: 10px;
     margin-bottom: 0;
 }
@@ -20,7 +20,7 @@ creates two columns for ingredient and method*/
     flex: 1;
 }
 
-/* Text styling and spacing */
+/* Text styling and spacing*/
 
 .recipe-container h1,
 .recipe-container h2 {
@@ -71,14 +71,17 @@ creates two columns for ingredient and method*/
     margin-bottom: 3px;
 }
 
-/* Recipe image formatting */
-.imgcentre {
-    max-width: 250px;
+/* Recipe video formatting */
+.noodle-video {
+    max-width: 400px;
     width: 100%;
+
     display: block;
     margin: 20px auto 0;
-    /* Rounded image corners */
+
     border-radius: 5px;
+
+    object-fit: cover;
 }
 
 /* Button styling */
@@ -93,14 +96,14 @@ creates two columns for ingredient and method*/
     border-radius: 3px;
 }
 
-/* Button styling on hover */
+/* Button styling on hover*/
 .modern-btn:hover {
     background: #F7F7ED;
     color: black;
 
 }
 
-/* Shopping list style */
+/* Shopping list style*/
 #shoppingList {
     font-family: "Courier New", Courier, monospace;
     margin-top: 10px;
@@ -208,11 +211,10 @@ creates two columns for ingredient and method*/
         width: 100%;
     }
 
-    /* Hides image on mobile screens */
-    .recipe-image,
-    .imgcentre {
-        display: none;
-    }
+    /* Hides video on mobile screens */
+    .noodle-video {
+    display: none;
+}
 
     /* Adjusts font size on mobile screens */
     .recipe-container p,
